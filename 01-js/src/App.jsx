@@ -61,22 +61,61 @@ function calcularpontos(){
 
 
  }
+ function junsal(){
+  let salariomensal, diastrabalhados
+
+  salariomensal = Number(prompt('quanto recebe por mes: '))
+  diastrabalhados = Number(prompt('dias trabalhados: '))
+ 
+  let recebido = salariomensal / diastrabalhados
+  alert('Valor recebido mensal: ' + recebido.toFixed(2) )
+
+  let salariosemanal = recebido *5
+  alert('Salario semanal: ' + salariosemanal.toFixed(2))
+
+ }
+ function caminhao(){
+  let peso, tara
+  peso = Number(prompt('Peso bruto: '))
+  tara = Number(prompt('Peso da tara: '))
+  let carga = peso - tara
+  alert('O peso da carga: ' + carga)
+
+
+ }
+ function candev(){
+  let chance, n
+  n = Number(prompt('quantas vezes ele olhou pro cll:')) 
+  chance = (0.1/(1 + 500 * n)) *100
+
+  alert('chane dele ser aprovado cll: ' + chance.toFixed(2) + '%')
+
+
+ }
   return (
     <div className="cont-app">
     <h1>JavaScript no React</h1>
 
-    <h2>Exercicios supimpas</h2>
+    <h2>Exercicios supimpas nivel (a) </h2>
     
 
     <button onClick={numdevs}>Empresa/RH</button>
     <button onClick={calcularpontos}>Campeonato</button>
     <button onClick={trocarsapatos}>Trocas pé pequeno</button>
     <button onClick={fingre}>Igreja</button>
-    <hr />
+    <button onClick={caminhao}>Frota da Telles</button>
     <button onClick={ceotraje}> Trajeto Pomar</button>
     <button onClick={testar}>Testar</button>
     <button onClick={calcularMedia}>Média</button>
+    <button onClick={junsal}>Junin</button>
+    <button onClick={candev}>Monika</button>
+    <hr />
+    <h2>Exercicios supimpas nivel (b)</h2>
+    
     </div>
+    
+
+
   )
 }
 
