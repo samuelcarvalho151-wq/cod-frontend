@@ -175,6 +175,116 @@ function calcularpontos(){
 
 
  }
+  function pet(){
+  let racao, precoCusto
+  racao = Number(prompt('Qual o valor do custo da ração: R$: '))
+  precoCusto = racao /100
+
+  alert('O preço de venda da ração: R$: ' + precoCusto.toFixed(2))
+
+
+ }
+    function carn() {
+    let pessoas = Number(prompt('Quantas pessoas vão participar do churrasco?'));
+
+    let carne = pessoas * 0.5;
+    let cerveja = pessoas * 1;
+    let agua = pessoas * 0.5;
+    let refri = pessoas * 0.2;
+
+   alert('Quantidade de carne: ' + carne + ' kg');
+   alert('Quantidade de cerveja: ' + cerveja + ' L');
+   alert('Quantidade de água: ' + agua + ' L');
+   alert('Quantidade de refrigerante: ' + refri + ' L');
+
+  }
+  function ja() {
+   
+  let caminhoes = Number(prompt('Quantos caminhões foram usados: '));
+
+  let jacares = caminhoes * 50;
+  let custo = caminhoes * 450;
+  let venda = jacares * 90;
+
+  jacares = Number(prompt('Quantos jacares foram vendidos: '))
+ 
+  
+  let lucro = venda - custo;
+
+  alert('Lucro da temporada: R$' + lucro);
+
+  }
+  function opa() {
+   let tokensGastos, numeroDeCaracteres, custoDoToken, tokensUsados, custoTotal
+
+    numeroDeCaracteres = Number(prompt('Quantidade de caracteres: '))
+    custoDoToken = Number(prompt('Qual foi o custo dos tokens: '))
+    tokensUsados = Number(prompt('Quantos tokens foram usados: '))
+    
+    tokensGastos = 5 + numeroDeCaracteres
+    custoTotal = tokensGastos * custoDoToken
+    
+    alert('Esse foi gasto dos tokens: $' + custoTotal)
+  }
+  function junao() {
+
+let horasEstimadasInput = prompt("Digite a quantidade estimada de horas para o desenvolvimento:");
+
+
+let horasEstimadas = parseFloat(horasEstimadasInput);
+
+if (isNaN(horasEstimadas) || horasEstimadas < 0) {
+    alert("Por favor, insira um número válido de horas.");
+} else {
+    
+    let custoConsultor = 500.00;
+    let valorHoraJunin = 350.00;
+
+    let precoCliente = custoConsultor + (valorHoraJunin * horasEstimadas);
+
+    let lucroFreela = precoCliente - custoConsultor;
+
+    
+    alert(
+        "--- Resumo do Freela ---\n" +
+        "Horas estimadas: " + horasEstimadas + "h\n" +
+        "Preço para cobrar do cliente: R$ " + precoCliente.toFixed(2) + "\n" +
+        "Lucro líquido do freela: R$ " + lucroFreela.toFixed(2)
+    );
+}
+
+  }
+  function neve() {
+  let relatoriosPF = Number(prompt('Quantos relatórios PF?'));
+  let relatoriosPJ = Number(prompt('Quantos relatórios PJ?'));
+
+  let tempoPF = Number(prompt('Quantas horas nos relatórios PF?'));
+  let tempoPJ = Number(prompt('Quantas horas nos relatórios PJ?'));
+
+  let valorPF = Number(prompt('Valor recebido de PF?'));
+  let valorPJ = Number(prompt('Valor recebido de PJ?'));
+
+  let totalRelatorios = relatoriosPF + relatoriosPJ;
+  let tempoTotal = tempoPF + tempoPJ;
+  let valorTotal = valorPF + valorPJ;
+
+  let mediaValorPF = valorPF / relatoriosPF;
+  let mediaValorPJ = valorPJ / relatoriosPJ;
+
+  let mediaTempoPF = tempoPF / relatoriosPF;
+  let mediaTempoPJ = tempoPJ / relatoriosPJ;
+
+alert(
+    'RELATÓRIO KOWALSKI\n\n' +
+    'Total de relatórios: ' + totalRelatorios + '\n' +
+    'Tempo total: ' + tempoTotal + ' horas\n' +
+    'Valor total: R$' + valorTotal + '\n\n' +
+    'Média valor PF: R$' + mediaValorPF.toFixed(2) + '\n' +
+    'Média valor PJ: R$' + mediaValorPJ.toFixed(2) + '\n' +
+    'Média tempo PF: ' + mediaTempoPF.toFixed(2) + ' horas\n' +
+    'Média tempo PJ: ' + mediaTempoPJ.toFixed(2) + ' horas'
+);
+  }
   return (
     <div className="cont-app">
     <h1>JavaScript no React</h1>
@@ -201,7 +311,15 @@ function calcularpontos(){
     <button onClick={sarru}>Sarumano</button>
     <button onClick={man}>Mano Juca</button>
     <button onClick={brique}>Romero Brique</button>
+    <button onClick={pet}>Pet Shop</button>
+    <button onClick={carn}>Churrascaria do Gaúcho</button>
+    <hr />
+    <h2>Exercicios supimpas nivel (c)</h2>
 
+    <button onClick={ja}>Gael</button>
+    <button onClick={opa}>I.A</button>
+    <button onClick={junao}>Junin</button>
+    <button onClick={neve}>Kovalski</button>
     </div>
     
 
