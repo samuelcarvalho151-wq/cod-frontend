@@ -14,6 +14,24 @@ import './main.css';
         </div>
         </section>
         <section className='servicos'>
+          <h2>Nossos serviços</h2>
+
+          <div className='servicos-grid'>
+              <span>👌</span>
+              <h2>Design de interface</h2>
+              <p>Telas claras, pensadas para o usuário.</p>
+          </div>
+          <div className='servicos-card'>
+            <span>✨</span>
+            <h2>Responsividade</h2>
+            <p>O mesmo site em qualquer tela.</p>
+
+          </div>
+          <div className='serivicos-card'>
+            <span>😊</span>
+            <h2>Performance</h2>
+            <p>Páginas leves que carregam rápido.</p>
+          </div>
         
         </section>
         </main>
