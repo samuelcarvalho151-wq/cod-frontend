@@ -16,23 +16,24 @@ import './main.css';
         <section className='servicos'>
           <h2>Nossos serviços</h2>
 
-          <div className='servicos-grid'>
+          <div className='servico-grid'>
               <span>👌</span>
               <h2>Design de interface</h2>
               <p>Telas claras, pensadas para o usuário.</p>
-          </div>
-          <div className='servicos-card'>
+          
+          <div className='servico-card'>
             <span>✨</span>
             <h2>Responsividade</h2>
             <p>O mesmo site em qualquer tela.</p>
 
-          </div>
-          <div className='serivicos-card'>
+          
+          <div className='serivico-card'>
             <span>😊</span>
             <h2>Performance</h2>
             <p>Páginas leves que carregam rápido.</p>
           </div>
-        
+         </div>
+         </div>
         </section>
         </main>
     )
