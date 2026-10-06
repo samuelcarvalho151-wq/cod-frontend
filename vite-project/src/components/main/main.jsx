@@ -1,42 +1,61 @@
-import './main.css';
+import "./Main.css";
+import ServicoCard from "../ServicoCard";
 
- function Main() {
-    return(
-        <main className='main'>
-        <section className='hero'>
+const servicos = [
+  {
+    id: 1,
+    icone: "🤮",
+    titulo: "Desingn de interface",
+    descricao: "Telas claras pensadas no usuário ",
+  },
+  {
+    id: 1,
+    icone: "😻",
+    titulo: "Responsividade",
+    descricao: "O mesmo site em qualquer tela ",
+  },
+  {
+    id: 1,
+    icone: "👌",
+    titulo: "O mesmo site em qualquer tela",
+    descricao: "Páginas leves que carregam rápido ",
+  },
+];
+
+function Main() {
+  return (
+    <main className="main">
+      <section className="hero">
         <h1>Criamos sites que funcionam</h1>
-        <p>Layouts responsivos, rápidos e acessiveis para seu negôcio crecer na Web</p>
-
-        <div className='hero-button'>
-        <a href="#orcamento" className='btn-primary'> Peça um orçamento</a>
-         <a href="#orcamento" className='btn-secondary'> Ver portfólio</a>
-
+        <p>
+          Layouts responsivos, rapidos e acessiveis para o seu negocio crescer
+          na web.
+        </p>
+        <div className="hero-buttons">
+          <a href="#orçamento" className="btn-primary">
+            Peça um orçamento
+          </a>
+          <a href="#portfolio" className="btn-secondary">
+            Ver portfólio
+          </a>
         </div>
-        </section>
-        <section className='servicos'>
-          <h2>Nossos serviços</h2>
+      </section>
+      <section className="servico">
+        <h2>Nossos serviços</h2>
 
-          <div className='servico-grid'>
-              <span>👌</span>
-              <h2>Design de interface</h2>
-              <p>Telas claras, pensadas para o usuário.</p>
-          
-          <div className='servico-card'>
-            <span>✨</span>
-            <h2>Responsividade</h2>
-            <p>O mesmo site em qualquer tela.</p>
-
-          
-          <div className='serivico-card'>
-            <span>😊</span>
-            <h2>Performance</h2>
-            <p>Páginas leves que carregam rápido.</p>
-          </div>
-         </div>
-         </div>
-        </section>
-        </main>
-    )
+        <div className="servicos-grid">
+          {servicos.map((servico) => (
+            <ServicoCard
+              key={servico.id}
+              icone={servico.icone}
+              titulo={servico.titulo}
+              descricao={servico.descricao}
+            />
+          ))}
+        </div>
+      </section>
+    </main>
+  );
 }
 
 export default Main;

@@ -6,7 +6,7 @@ return(
 <footer className='footer'>
 
  <div className='footer-container'>
-    <span>&Copy;2026 Studio Alfa</span>
+    <span>&copy; 2026 Studio Alfa</span>
   <div className='footer-icons'>
     <a href="#" aria-label='instragram'>&#x1F4F7;</a>
     <a href="#" aria-label='Github'>&#x1F4BB;</a>
